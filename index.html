@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./cognitoLogo.png">
+    <title>My henna party anticipators | Cognito Forms</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans Condensed:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      html {
+        transition: all 0.5s ease;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans Condensed";
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #cdcccc;
+        color: #000;
+        padding: 40px 0;
+        transition: all 0.5s ease;
+      }
+
+      .form_wrapper {
+        position: relative;
+        padding: 40px 30px 35px;
+        background: #fff;
+        width: 800px;
+      }
+
+      .form_wrapper_content h4 {
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 4px;
+      }
+
+      .form_wrapper_content .header_box small {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+      }
+
+      .form_box label {
+        font-size: 14px;
+      }
+
+      .form_box input {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        height: 35px;
+        border: 1px solid #cdcccc;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      .form_box input::placeholder {
+        font-size: 13px;
+        color: #cdcccc;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ::-webkit-inner-spin-button {
+        appearance: none;
+      }
+
+      .button_div button {
+        font-size: 14px;
+        background: #c34b23 !important;
+        border: 1px solid #c34b23 !important;
+        transition: 0.3s;
+      }
+
+      .button_div button:hover {
+        border: 1px solid #fff !important;
+      }
+
+      .warn {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+      }
+
+      .footer {
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+
+      .footer_box {
+        display: flex;
+        width: fit-content;
+      }
+
+      .footer_box a {
+        text-decoration: none;
+        margin: 15px 15px 0;
+        padding: 0px;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #111;
+        transition: none !important;
+        border-bottom: 1px solid transparent;
+      }
+
+      .footer_box a:hover {
+        border-bottom: 1px solid #ddd;
+      }
+
+      .powered {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #deeaea;
+        padding: 17px;
+      }
+      svg {
+        width: 20px;
+        margin: auto 5px auto 0;
+      }
+
+      .arrange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        vertical-align: middle;
+      }
+
+      .arrange span {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #54727a;
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+
+      .arrange a {
+        background: #54727a;
+        color: #deeaea;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.5s;
+      }
+
+      .arrange a:hover {
+        background: #234652;
+        text-decoration: none;
+      }
+      :root:root:root:root:root .cog-i-cogicon__cog {
+        fill: #d85427 !important;
+      }
+      html .cog-i-cogicon__c,
+      :root:root:root:root:root .cog-i-cogicon__c {
+        fill: #fff !important;
+      }
+
+      .form_box.addPinkbg {
+        background: #f8e9e7;
+      }
+
+      .addPinkbg2 {
+        background: #f8e9e7;
+        margin: 3px 0 0 15px;
+      }
+
+      .alert_ {
+        background: #cc2a26;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        padding: 6px;
+        margin: 10px 0;
+      }
+
+      .show {
+        display: none;
+      }
+
+      .adjust {
+        margin-left: 0px;
+      }
+
+      .adjustlower {
+        margin-left: 10px;
+      }
+
+      .inp1.border:focus,
+      .inp2.border:focus,
+      .inp3.border:focus {
+        border: 1px solid #f00 !important;
+        outline: 2px solid #fff !important;
+        box-shadow: none !important;
+      }
+
+      .unavailable {
+        opacity: 0;
+      }
+
+      .network {
+        background: #cc2a26;
+        padding: 12px;
+        outline: 1px solid #fff;
+        box-shadow: 0 0 5px #cdcccc;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 13px;
+        width: 520px;
+        max-width: 100%;
+      }
+
+      .cramp {
+        position: fixed;
+        top: 2px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 0 15px;
+        width: 100%;
+      }
+      @media screen and (max-width: 850px) {
+        body {
+          padding: 0;
+          background: #fff;
+        }
+      }
+      @media screen and (max-width: 580px) {
+        .col-sm-6 {
+          margin-right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form_wrapper">
+      <div class="cramp">
+        <div class="unavailable network mx-auto">
+          Network unavailable, please try again later.
+        </div>
+      </div>
+      <div class="form_wrapper_content">
+        <div class="header_box mb-3 mx-2">
+          <h4>My henna party anticipators</h4>
+          <small>Henna Party Abeokuta 1.0</small>
+        </div>
+        <form>
+          <div class="form_box pt-2 px-2 pb-2" id="err1">
+            <label for="name" class="font-weight-bold mt-1"
+              >Name <span class="text-danger">*</span></label
+            >
+            <div class="row">
+              <div class="col-6 pr-0">
+                <input
+                  required
+                  type="text"
+                  class="form-control rounded-0 inp1"
+                  id="fname"
+                  placeholder="First"
+                />
+              </div>
+              <div class="col-6">
+                <input
+                  required
+                  type="text"
+                  class="form-control rounded-0 inp2"
+                  placeholder="Last"
+                  id="lname"
+                />
+              </div>
+            </div>
+            <div class="alert_ first show">First and Last are required.</div>
+          </div>
+
+          <div class="form_box">
+            <div class="row row_ adjust">
+              <div class="col-sm-6 pl-2 pr-2" id="err2">
+                <label for="phone" class="font-weight-bold mt-3"
+                  >Phone <span class="text-danger">*</span></label
+                >
+                <input
+                  required
+                  type="number"
+                  class="form-control rounded-0 inp3"
+                  id="phone"
+                  placeholder="WhatsApp number"
+                />
+                <div class="alert_ second show">Phone is required.</div>
+              </div>
+              <div class="col-sm-6"></div>
+            </div>
+          </div>
+          <div class="button_div mt-3 row_2 adjustlower">
+            <button type="submit" class="btn btn-danger mt-3" id="toggle">
+              Click here to join the group now.
+            </button>
+          </div>
+        </form>
+        <div class="mt-2 pb-4 row_3 adjustlower">
+          <small class="warn"
+            >Please do not submit passwords through Cognito Forms.</small
+          >
+        </div>
+
+        <div class="footer mt-2 row_4 adjustlower">
+          <div class="footer_box mx-auto">
+            <a href="">Report Abuse</a>
+            <a href="">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="powered">
+      <div class="arrange">
+        <span class="cog-branding__powered"
+          ><svg
+            viewBox="0 0 39 39"
+            focusable="false"
+            class="cog-icon cog-i-cogicon"
+          >
+            <g>
+              <path
+                d="M16.844.15S18.131 0 19.417 0s2.572.15 2.572.15l1.09 4.664c1.453.363 2.822.937 4.073 1.688l4.07-2.528s1.015.804 1.925 1.713a25.37 25.37 0 011.712 1.926l-2.528 4.068a14.961 14.961 0 011.689 4.074l4.663 1.09s.15 1.286.15 2.572-.15 2.572-.15 2.572l-4.663 1.09a14.961 14.961 0 01-1.689 4.073l2.528 4.07s-.803 1.015-1.712 1.925c-.91.91-1.926 1.712-1.926 1.712l-4.069-2.528a14.961 14.961 0 01-4.073 1.689l-1.09 4.663s-1.286.15-2.572.15-2.573-.15-2.573-.15l-1.09-4.663a14.963 14.963 0 01-4.072-1.689l-4.07 2.528s-1.015-.803-1.925-1.712c-.91-.91-1.713-1.926-1.713-1.926l2.528-4.069a14.962 14.962 0 01-1.688-4.073L.15 21.989S0 20.703 0 19.417s.15-2.573.15-2.573l4.664-1.09a14.962 14.962 0 011.688-4.072l-2.528-4.07s.804-1.015 1.713-1.925c.91-.91 1.926-1.713 1.926-1.713l4.068 2.528a14.962 14.962 0 014.074-1.688L16.845.15z"
+                class="cog-i-cogicon__cog"
+              ></path>
+              <path
+                d="M23.943 21.163a5.037 5.037 0 01-1.753 2.073 5.207 5.207 0 01-2.779.862 5.094 5.094 0 01-1.942-.377 5.272 5.272 0 01-2.211-1.83 5.184 5.184 0 01-.864-2.774c0-.7.135-1.346.378-1.938a4.947 4.947 0 011.807-2.18 5.208 5.208 0 012.779-.862c.7 0 1.348.134 1.942.377a4.952 4.952 0 012.184 1.803c.135.216.27.431.378.673l5.53-1.426c-.081-.216-.162-.404-.243-.62a10.743 10.743 0 00-3.857-4.684 10.544 10.544 0 00-5.961-1.831c-1.403.054-2.806.35-4.073.888a10.754 10.754 0 00-4.694 3.85 10.496 10.496 0 00-1.834 5.95c0 1.454.297 2.854.836 4.146a10.743 10.743 0 003.857 4.685c1.7 1.158 3.75 1.83 5.961 1.83 1.457 0 2.86-.295 4.154-.834a10.755 10.755 0 004.694-3.85c.512-.754.917-1.561 1.24-2.45l-5.529-1.48z"
+                class="cog-i-cogicon__c"
+              ></path>
+            </g>
+          </svg>
+          Powered by Cognito Forms.
+        </span>
+        <a
+          href="https://www.cognitoforms.com//?crs=cmVmcHVibGljOjpTYWhhZGF0Smltb2g=&utm_source=Customer-Referral&utm_medium=form&utm_campaign=Form"
+          >Try It Now</a
+        >
+      </div>
+    </div>
+
+    <script>
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let phone = document.getElementById("phone").value;
+
+      let err1 = document.getElementById("err1");
+      let err2 = document.getElementById("err2");
+      let toggle = document.getElementById("toggle");
+      let first = document.querySelector(".first");
+      let second = document.querySelector(".second");
+      let row = document.querySelector(".row_");
+      let row2 = document.querySelector(".row_2");
+      let row3 = document.querySelector(".row_3");
+      let row4 = document.querySelector(".row_4");
+      let inp1 = document.querySelector(".inp1");
+      let inp2 = document.querySelector(".inp2");
+      let inp3 = document.querySelector(".inp3");
+      let network = document.querySelector(".network");
+
+      toggle.onclick = function () {
+        err1.classList.add("addPinkbg");
+        err2.classList.add("addPinkbg2");
+        first.classList.remove("show");
+        second.classList.remove("show");
+        row.classList.remove("adjust");
+        row2.classList.remove("adjustlower");
+        row3.classList.remove("adjustlower");
+        row4.classList.remove("adjustlower");
+        inp1.classList.add("border");
+        inp2.classList.add("border");
+        inp3.classList.add("border");
+        network.classList.remove("unavailable");
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
